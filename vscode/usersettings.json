@@ -1,0 +1,44 @@
+{
+  "git.autofetch": true,
+  "git.confirmSync": false,
+  "editor.fontFamily": "'FiraCode Nerd Font Mono', 'Cascadia Code', Menlo, Monaco, 'Courier New', monospace",
+  "editor.fontLigatures": true,
+  "editor.fontSize": 14,
+  "workbench.tree.indent": 12,
+  "workbench.iconTheme": "vscode-icons",
+  "workbench.editor.labelFormat": "short",
+  "explorer.sortOrder": "filesFirst",
+  "playwright.reuseBrowser": false,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnSave": true,
+  "[csharp]": {
+    "editor.defaultFormatter": "csharpier.csharpier-vscode"
+  },
+  "[xml]": {
+    "editor.defaultFormatter": "csharpier.csharpier-vscode"
+  },
+  "editor.codeActionsOnSave": {
+    "source.organizeImports": "always"
+  },
+  "window.nativeTabs": true,
+  "editor.minimap.maxColumn": 100,
+  "workbench.editorAssociations": {
+    "*.copilotmd": "vscode.markdown.preview.editor",
+    "*.svg": "imagePreview.previewEditor",
+    "*.json": "default"
+  },
+  "editor.accessibilitySupport": "off",
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "github.copilot.nextEditSuggestions.enabled": true,
+  "terminal.integrated.profiles.windows": {
+    "PowerShell": {
+      "source": "PowerShell",
+      "icon": "terminal-powershell",
+      "args": ["-ExecutionPolicy", "Bypass"]
+    }
+  },
+  "terminal.integrated.defaultProfile.windows": "PowerShell",
+  "python.defaultInterpreterPath": "/opt/homebrew/bin/python3",
+  "claudeCode.preferredLocation": "sidebar",
+  "workbench.colorTheme": "Dark+"
+}

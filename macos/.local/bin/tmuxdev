@@ -1,0 +1,28 @@
+#!/usr/bin/env bash
+
+WORKDIR="$(pwd)"
+DIRNAME="$(basename "$WORKDIR")"
+
+# Strip everything up to the LAST hyphen or underscore
+STRIPPED_NAME="${DIRNAME##*[-_]}"
+# Take the first 4 characters of that stripped name
+SHORT_NAME="${STRIPPED_NAME:0:4}"
+# Use the first argument if provided, otherwise fallback to the SHORT_NAME
+SESSION="${1:-$SHORT_NAME}"
+
+# Check if the tmux session already exists
+if tmux has-session -t "$SESSION" 2>/dev/null; then
+    echo "Session '$SESSION' already exists. Attaching..."
+    tmux attach-session -t "$SESSION"
+    exit 0
+fi
+
+tmux new-session -d -s "$SESSION" -n "server" -c "$WORKDIR" -x "$(tput cols)" -y "$(tput lines)"
+
+tmux new-window -t "$SESSION" -n "claude" -c "$WORKDIR"
+tmux send-keys -t "$SESSION:claude" "claude" Enter
+
+tmux new-window -t "$SESSION" -n "shell" -c "$WORKDIR"
+
+tmux select-window -t "$SESSION:server"
+tmux attach-session -t "$SESSION"
