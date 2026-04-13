@@ -16,6 +16,8 @@ window-padding-y = 8
 # ==========================================
 # 2. KEYBINDINGS
 # ==========================================
+macos-option-as-alt = true
+
 # Navigate to the next tab
 keybind = cmd+ctrl+n=next_tab
 
