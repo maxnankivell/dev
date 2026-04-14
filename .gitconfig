@@ -1,0 +1,10 @@
+[user]
+	name = Max Nankivell
+	email = maxnankivell1@gmail.com
+	signingkey = 
+[gpg]
+	format = ssh
+[commit]
+	gpgsign = true
+[tag]
+	gpgSign = true
