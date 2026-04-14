@@ -1,28 +1,23 @@
 # ==========================================
 # 1. UI & APPEARANCE
 # ==========================================
-# A popular, clean built-in dark theme (you can change this easily)
+
 theme = Dark+
 
-# Font settings (Change to your preferred coding font, e.g., "Fira Code" or "JetBrains Mono")
 font-family = "FiraCode Nerd Font Mono"
 font-style = "SemiBold"
 font-size = 14
 
-# Add a little breathing room around the edges of the text
 window-padding-x = 8
 window-padding-y = 8
 
 # ==========================================
 # 2. KEYBINDINGS
 # ==========================================
+
 macos-option-as-alt = true
 
-# Navigate to the next tab
+# Add tab bindings same as my VSCode
 keybind = cmd+ctrl+n=next_tab
-
-# Navigate to the previous tab
 keybind = cmd+ctrl+p=previous_tab
-
-# Bonus: Hotkey to create a new tab (matches your layout)
 keybind = cmd+ctrl+t=new_tab
