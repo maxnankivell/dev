@@ -1,0 +1,1 @@
+fnm env --use-on-cd --version-file-strategy=recursive --corepack-enabled --shell powershell | Out-String | Invoke-Expression
