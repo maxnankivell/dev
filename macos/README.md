@@ -2,12 +2,12 @@
 
 ## 1. Core Tools
 
-Install and configure these foundational tools before anything else.
+Install and configure these tools before anything else.
 
 - **Zsh**: Comes pre-installed on macOS. Verify with `zsh --version`.
 - **Homebrew**: Install from https://brew.sh/
-- **Git**: `brew install git`, then configure with `git config --global user.name "..."` and `git config --global user.email "..."`
-- **VS Code**: Download from https://code.visualstudio.com/ — install the `code` CLI command via the Command Palette (`Shift+Cmd+P` → "Shell Command: Install 'code' command in PATH"). Turn on settings sync and make sure user settings are syncing correctly if not copy from `vscode/usersettings.json`.
+- **Git**: `brew install git`, then download `.gitconfig` and setup signing key
+- **VS Code**: Download and turn on settings sync or copy from `vscode/usersettings.json`.
 
 ---
 
