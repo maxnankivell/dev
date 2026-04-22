@@ -2,7 +2,7 @@
 
 ## Keyboard: CapsLock to Modifier Keys
 
-`keyboard/caps-lock-to-modifier.ahk` remaps CapsLock so that holding it turns certain keys into shortcuts:
+`keyboard/caps-lock-to-modifier.ahk` remaps CapsLock so that holding it turns certain keys into shortcuts and tapping escapes:
 
 | CapsLock + | Action         |
 | ---------- | -------------- |
@@ -19,3 +19,9 @@
    - Press `Win + R`, type `shell:startup`, and press Enter — this opens the Startup folder (should look something like this `C:\Users\YourUserName\AppData\Roaming\Microsoft\Windows\Start Menu\Programs`)
    - Copy `keyboard/caps-lock-to-modifier.ahk` into that folder
    - The script will now run automatically every time you log in
+
+## Node
+
+1. Download **fnm**
+
+2. Add Powershell script in documents to run it on startup
