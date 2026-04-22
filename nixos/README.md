@@ -14,7 +14,7 @@ KDE comes with KWIN just import the `kdeshortcuts.kksrc` file in the shortcut se
 
 ## 4. Config files
 
-Ghostty and tmux can't have their config done via nix so these two config files need to go in the home directory
+Ghostty, git and tmux can't have their config done via nix so, gitconfig goes in the `$HOME` directory and the other two in `$HOME/.config`
 
 ## 5. Scripts
 
