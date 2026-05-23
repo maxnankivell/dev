@@ -18,6 +18,9 @@
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
+  # Flakes
+  nix.settings.experimental-features = [ "nix-command" "flakes" ];
+
   # Networking
   networking.hostName = "maxnix"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
@@ -38,7 +41,7 @@
   services.xserver.enable = true;
 
   # Enable the KDE Plasma Desktop Environment.
-  services.displayManager.sddm.enable = true;
+  services.displayManager.plasma-login-manager.enable = true;
   services.desktopManager.plasma6.enable = true;
 
   # Enable sound with pipewire.
@@ -61,6 +64,10 @@
   hardware.graphics.enable = true;
   services.xserver.videoDrivers = [ "nvidia" ];
   hardware.nvidia.open = true;  # see the note above
+  hardware.nvidia.modesetting.enable = true;
+
+  # Wine kernel module (enhanced perf in games)
+  # boot.kernelModules = [ "ntsync" ];
 
   # Keyboard layout
   # Note: KDE Plasma overrides this setting
@@ -349,7 +356,15 @@
   };
 
   # Steam
-  programs.steam.enable = true;
+  programs.steam = {
+    enable = true;
+    dedicatedServer.openFirewall = true;
+    localNetworkGameTransfers.openFirewall = true;
+    remotePlay.openFirewall = true;
+    extraCompatPackages = with pkgs; [
+      proton-ge-bin
+    ];
+  };
 
   # List packages installed in system profile. To search, run:
   # $ nix search wget
@@ -377,6 +392,7 @@
     prusa-slicer
     notion-app-enhanced
     bruno
+    nixd
   ];
 
   # ----------------
