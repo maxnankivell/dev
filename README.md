@@ -1,6 +1,6 @@
 # dev
 
-Personal dev configuration for setting up a new machine.
+Personal dev configuration for setting up new machine.
 
 ## Setup
 
